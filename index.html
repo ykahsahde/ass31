@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main-product-image{
+        width: 800px;
+        height: 500px;
+        object-fit: cover;
+        border: 1px solid black;
+        border-radius: 20px;
+        box-shadow:0px 0px 10px 0px rgb(66, 65, 65) ;
+        display: block;
+        margin: 0px auto;
+    }
+    .product-images-container{
+        display: flex;
+        justify-content: center;
+
+    }
+    .product-images{
+        height: 90px;
+        width: 100px;
+        object-fit: cover;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 10px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div>
+        <img src="mainimg.webp" id="main-product-image" alt="">
+        <div class="product-images-container">
+           <img src="mainimg.webp" class="product-images" onclick="changeimage('mainimg.webp')" alt="">
+           <img src="mainimg1.webp" class="product-images"onclick="changeimage('mainimg1.webp')" alt="">
+           <img src="mainimg2.webp" class="product-images"onclick="changeimage('mainimg2.webp')"alt="">
+           <img src="mainimg3.webp" class="product-images"onclick="changeimage('mainimg3.webp')" alt="">
+
+        </div>
+    </div>
+    <script>
+        function changeimage(imageName){
+             const mainimage=document.getElementById('main-product-image');
+             mainimage.src=imageName
+        }
+    </script>
+</body>
+</html>
